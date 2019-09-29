@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UserSecretsId>c6d0fc54-9035-48a6-874c-79aa24640dc7</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GarthToland.ChangeApi\GarthToland.ChangeApi.csproj" />
+  </ItemGroup>
+
+</Project>

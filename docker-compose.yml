@@ -1,0 +1,32 @@
+version: '3.4'
+
+networks:
+  change-api:
+    driver: bridge 
+
+services:
+  change_api:
+    depends_on:
+      - "postgres_image"
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8071:80"
+    networks:
+      - change-api
+  
+  postgres_image:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - ./database/change-schema.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: change
+    networks:
+      - change-api
