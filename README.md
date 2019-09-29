@@ -13,7 +13,7 @@ Remove `.example` from the `source\GarthToland.ChangeApi.Web\appsettings.json.ex
 #### Scaffold a PostgreSQL database (ORM)
 
 ```bash
-dotnet ef dbcontext scaffold -f "Host=localhost;Port=54321;Username=postgres;Password=p;Database=change;" Npgsql.EntityFrameworkCore.PostgreSQL --project GarthToland.ChangeApi -o Models\Generated --context ChangeContext
+dotnet ef dbcontext scaffold -f "Host=localhost;Port=54321;Username=postgres;Password=p;Database=change;" Npgsql.EntityFrameworkCore.PostgreSQL --project GarthToland.ChangeApi -o Models\Generated --context ChangeDbContext
 ```
 
 #### Docker

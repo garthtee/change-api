@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace GarthToland.ChangeApi.Models.Generated
 {
-    public partial class ChangeContext : DbContext
+    public partial class ChangeDbContext : DbContext
     {
-        public ChangeContext()
+        public ChangeDbContext()
         {
         }
 
-        public ChangeContext(DbContextOptions<ChangeContext> options)
+        public ChangeDbContext(DbContextOptions<ChangeDbContext> options)
             : base(options)
         {
         }

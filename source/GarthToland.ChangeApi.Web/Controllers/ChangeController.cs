@@ -13,10 +13,10 @@ namespace GarthToland.ChangeApi.Web.Controllers
     [Route("[controller]")]
     public class ChangeController : ControllerBase
     {
-        private readonly ChangeContext _context;
+        private readonly ChangeDbContext _context;
         private readonly ILogger<ChangeController> _logger;
 
-        public ChangeController(ChangeContext context, ILogger<ChangeController> logger)
+        public ChangeController(ChangeDbContext context, ILogger<ChangeController> logger)
         {
             _context = context;
             _logger = logger;

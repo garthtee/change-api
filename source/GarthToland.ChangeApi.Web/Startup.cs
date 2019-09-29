@@ -28,7 +28,7 @@ namespace GarthToland.ChangeApi.Web
         {
             services.AddControllers();
 
-            services.AddDbContext<ChangeContext>(options =>
+            services.AddDbContext<ChangeDbContext>(options =>
                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
         }
 
